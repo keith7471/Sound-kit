@@ -18,7 +18,7 @@ footer {
 
 .w {
   background-image:url("images/danza_1.jpg") ;
-  background-size: cover;                        /* Fits the image in the square box*/
+  background-size: cover;                      /* Fits the image in the square box*/
 
 }
 
@@ -49,7 +49,9 @@ footer {
 .set {
   margin: 7% auto;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .game-over {
@@ -64,6 +66,13 @@ footer {
 
 .red {
   color: red;
+}
+
+.colorr {
+  color: orange;
+  background-color: aqua;
+  text-shadow: #DBEDF3;
+
 }
 
 .drum {

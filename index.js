@@ -8,9 +8,13 @@ document.querySelectorAll(".drum")[i].addEventListener("click", onbuttonclicked)
 
 function onbuttonclicked()
 {  
-    this.style.color="orange"; 
+    //this.style.color="orange"; 
     var letter= this.innerHTML;
+    
+
+    //var bb= document.querySelector("." + )
     sound(letter);
+    button_animation(letter);
  }
 
 document.addEventListener("keypress", function(event)
@@ -59,5 +63,16 @@ document.addEventListener("keypress", function(event)
             break;
     }      
     }
+
+function button_animation(letter)
+{
+
+    var button_press= document.querySelector("." + letter);
+    button_press.classList.add("pressed");
+    //button_press.classList.add("colorr");
+
+    setTimeout(function(){button_press.classList.remove("pressed")}, 100
+    );
+}
     
 
