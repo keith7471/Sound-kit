@@ -4,15 +4,24 @@ for(i=0; i<document.querySelectorAll(".drum").length; i++)
 {
 document.querySelectorAll(".drum")[i].addEventListener("click", onbuttonclicked);
 
-
+}
 
 function onbuttonclicked()
-{
+{  
     this.style.color="orange"; 
-    //alert("the button is clicked");
-    //console.log("here" + this.innerHTML);
     var letter= this.innerHTML;
-    switch(this.innerHTML)
+    sound(letter);
+ }
+
+document.addEventListener("keypress", function(event)
+{
+    //var keyp=event.key;
+    sound(event.key);
+});
+
+    function sound(keypp)
+    {
+    switch(keypp)
     {
         case "F":
         var music= new Audio("sounds/danza_kuduro.mp3");
@@ -48,14 +57,7 @@ function onbuttonclicked()
             var top_7= new Audio("sounds/snare.mp3")
             top_7.play();
             break;
-         
+    }      
     }
     
-    //var letters= this.innerHTML;
-    //switch()
-    
-    
-    
-}
 
-}
